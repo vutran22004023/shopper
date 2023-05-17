@@ -1,0 +1,51 @@
+.header{
+    height: 120px; 
+    /* chiều cao; */
+    background-image: linear-gradient(0,#ff6433,#f5402d);
+    /* làm đỏ sang cam */
+}
+
+.header__navbar {
+    display: flex;
+    /* 2 thằng con nằm trên 1 hàng */
+    justify-content: space-between;
+    /* cách 2 thằng con ra xa */
+}
+
+.header__navbar-list {
+    list-style: none;
+    /* làm mất dấu chấm; */
+    padding-left: 0;
+}
+
+.header_navbar-item{
+    margin: 0 8px;
+    position: relative;
+}
+
+.header_navbar-item,
+.header_navbar-item-link {
+    display: inline-block;
+    /* giữ tính chất khối và nằm trên 1 hàng */
+    font-size: 1rem;
+    color:  var(--white-color);
+    text-decoration: none;
+    /* bỏ đi gạch chân của thẻ a */
+    font-weight: 300;
+    /* tăng giảm độ dày font chữ */
+}
+
+.header_navbar-item--strong{
+    font-weight: 400;
+}
+
+.header_navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #fb9086;
+    height: 14px;
+    top: 50%;
+    right: -9px;
+    transform: translateY(-50%);
+}
